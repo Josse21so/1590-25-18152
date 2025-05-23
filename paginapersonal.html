@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>My HTML Page</h1>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página web personal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3b82f6',
+            secondary: '#f0f4ff',
+            accent: '#6366f1',
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-secondary min-h-screen font-sans">
+
+  <!-- Menú de navegación -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <div class="text-2xl font-bold text-primary">Menú Alumno</div>
+        <div class="hidden md:flex space-x-6">
+          <a href="#hoja-de-vida" class="text-gray-700 hover:text-primary font-medium">Hoja de Vida</a>
+          <a href="#tabla-de-notas" class="text-gray-700 hover:text-primary font-medium">Tabla de Notas</a>
+          <a href="#galeria" class="text-gray-700 hover:text-primary font-medium">Galería</a>
+          <a href="#video-youtube" class="text-gray-700 hover:text-primary font-medium">YouTube</a>
+          <a href="#juego" class="text-gray-700 hover:text-primary font-medium">Juego</a>
+          <a href="#pasos-realizados" class="text-gray-700 hover:text-primary font-medium">Pasos Realizados</a>
+        </div>
+        <div class="md:hidden">
+          <button id="menu-btn">
+            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+      <a href="#hoja-de-vida" class="block text-gray-700 py-2">Hoja de Vida</a>
+      <a href="#tabla-de-notas" class="block text-gray-700 py-2">Tabla de Notas</a>
+      <a href="#galeria" class="block text-gray-700 py-2">Galería</a>
+      <a href="#video-youtube" class="block text-gray-700 py-2">YouTube</a>
+      <a href="#juego" class="block text-gray-700 py-2">Juego</a>
+      <a href="#pasos-realizados" class="block text-gray-700 py-2">Pasos Realizados</a>
+    </div>
+  </nav>
+
+  <!-- Sección Hoja de Vida -->
+<section id="hoja-de-vida" class="relative max-w-4xl mx-auto mt-10 bg-white p-8 rounded-xl shadow-lg">
+  <h2 class="text-3xl font-bold text-accent mb-6 text-center">Hoja de Vida</h2>
+  <img src="foto.jpg" alt="Foto personal" class="w-32 h-32 object-cover rounded-full border-4 border-primary absolute top-8 right-8" />
+  <div class="space-y-4 text-gray-700">
+    <p><strong>Nombre:</strong> Juan José Argumedo Morataya</p>
+    <p><strong>Fecha de cumpleaños:</strong> 21 de Diciembre del 2005</p>
+    <p><strong>Correo:</strong> jargumdo@miumg.edu.gt</p>
+    <p><strong>Teléfono:</strong> ‪‪+502 5834-0858‬‬</p>
+    <p><strong>Dirección:</strong> El Cerinal, Barberena, Santa Rosa</p>
+    <p><strong>Educación:</strong> Bachillerato en computación</p>
+  </div>
+</section>
+
+  <!-- Sección Tabla de Notas -->
+  <section id="tabla-de-notas" class="max-w-5xl mx-auto mt-10 bg-white p-8 rounded-xl shadow-lg">
+    <h2 class="text-3xl font-bold text-accent mb-4 text-center">Tabla de Notas</h2>
+    <p class="text-gray-600 mb-6 text-center">Resumen de calificaciones obtenidas por el alumno en el ciclo académico actual.</p>
+    <div class="overflow-x-auto">
+      <table class="min-w-full border border-gray-300 text-sm text-left">
+        <thead class="bg-primary text-white">
+          <tr>
+            <th class="py-3 px-4 border">Curso</th>
+            <th class="py-3 px-4 border">Parcial 1</th>
+            <th class="py-3 px-4 border">Parcial 2</th>
+            <th class="py-3 px-4 border">Nota Final</th>
+            <th class="py-3 px-4 border">Observaciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hover:bg-gray-100"><td class="py-3 px-4 border">Desarrollo humano y profesional</td><td class="py-3 px-4 border">13</td><td class="py-3 px-4 border">11</td><td class="py-3 px-4 border font-semibold">24</td><td class="py-3 px-4 border text-green-600">Aprobado</td></tr>
+          <tr class="hover:bg-gray-100"><td class="py-3 px-4 border">Metodología de la investigación</td><td class="py-3 px-4 border">6</td><td class="py-3 px-4 border">15</td><td class="py-3 px-4 border font-semibold">21</td><td class="py-3 px-4 border text-green-600">Aprobado</td></tr>
+          <tr class="hover:bg-gray-100"><td class="py-3 px-4 border">Introducción a los sistemas de cómputo</td><td class="py-3 px-4 border">9</td><td class="py-3 px-4 border">9</td><td class="py-3 px-4 border font-semibold">18</td><td class="py-3 px-4 border text-red-500">Aprobado</td></tr>
+          <tr class="hover:bg-gray-100"><td class="py-3 px-4 border">Contabilidad I</td><td class="py-3 px-4 border">13</td><td class="py-3 px-4 border">15</td><td class="py-3 px-4 border font-semibold">28</td><td class="py-3 px-4 border text-green-600">Aprobado</td></tr>
+          <tr class="hover:bg-gray-100"><td class="py-3 px-4 border">Lógica de los sistemas</td><td class="py-3 px-4 border">10</td><td class="py-3 px-4 border">11</td><td class="py-3 px-4 border font-semibold">21</td><td class="py-3 px-4 border text-green-600">Aprobado</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Sección Galería -->
+<section id="galeria" class="max-w-6xl mx-auto mt-10 bg-white p-8 rounded-xl shadow-lg">
+  <h2 class="text-3xl font-bold text-accent mb-6 text-center">Galería de Imágenes</h2>
+  <div class="overflow-x-auto whitespace-nowrap space-x-4 flex">
+    <img src="anna.jpg" alt="Anna" class="inline-block h-48 rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+    <img src="ariel.jpg" alt="Ariel" class="inline-block h-48 rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+    <img src="bella.jpg" alt="Bella" class="inline-block h-48 rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+    <img src="elsa.jpg" alt="Elsa" class="inline-block h-48 rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+    <img src="jazmin.png" alt="Jazmín" class="inline-block h-48 rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+    <img src="merida.jpg" alt="Merida" class="inline-block h-48 rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+    <img src="moana.jpeg" alt="Moana" class="inline-block h-48 rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+    <img src="nieves.jpg" alt="Nieves" class="inline-block h-48 rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+    <img src="rapunzel.jpg" alt="Rapunzel" class="inline-block h-48 rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+    <img src="tiana.jpg" alt="Tiana" class="inline-block h-48 rounded-lg shadow-md hover:scale-105 transition-transform duration-300" />
+  </div>
+</section>
+
+  <!-- Sección Video de YouTube -->
+  <section id="video-youtube" class="max-w-4xl mx-auto mt-10 bg-white p-8 rounded-xl shadow-lg">
+    <h2 class="text-3xl font-bold text-accent mb-6 text-center">Video de YouTube</h2>
+    <div class="flex justify-center">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ZvGrZx7uM6Y?si=w12CDt4vS5XBz4o9" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Sección Juego -->
+  <section id="juego" class="max-w-4xl mx-auto mt-10 bg-white p-8 rounded-xl shadow-lg">
+    <h2 class="text-3xl font-bold text-accent mb-6 text-center">Juego: Tic Tac Toe</h2>
+    <p class="text-center text-gray-700 mb-4">Haz clic en un cuadro para jugar.</p>
+    <div id="tablero" class="grid grid-cols-3 gap-4 max-w-xs mx-auto">
+      <button class="casilla bg-gray-100 h-24 flex items-center justify-center text-5xl font-bold" data-index="0"></button>
+      <button class="casilla bg-gray-100 h-24 flex items-center justify-center text-5xl font-bold" data-index="1"></button>
+      <button class="casilla bg-gray-100 h-24 flex items-center justify-center text-5xl font-bold" data-index="2"></button>
+      <button class="casilla bg-gray-100 h-24 flex items-center justify-center text-5xl font-bold" data-index="3"></button>
+      <button class="casilla bg-gray-100 h-24 flex items-center justify-center text-5xl font-bold" data-index="4"></button>
+      <button class="casilla bg-gray-100 h-24 flex items-center justify-center text-5xl font-bold" data-index="5"></button>
+      <button class="casilla bg-gray-100 h-24 flex items-center justify-center text-5xl font-bold" data-index="6"></button>
+      <button class="casilla bg-gray-100 h-24 flex items-center justify-center text-5xl font-bold" data-index="7"></button>
+      <button class="casilla bg-gray-100 h-24 flex items-center justify-center text-5xl font-bold" data-index="8"></button>
+    </div>
+    <p class="text-center text-xl mt-4 font-medium" id="mensaje"></p>
+    <div class="flex justify-center mt-6">
+      <button id="reiniciar" class="bg-primary text-white px-6 py-2 rounded hover:bg-accent">Reiniciar Juego</button>
+    </div>
+  </section>
+
+  <!-- Sección Pasos Realizados -->
+  <section id="pasos-realizados" class="max-w-4xl mx-auto mt-10 mb-20 bg-white p-8 rounded-xl shadow-lg">
+    <h2 class="text-3xl font-bold text-accent mb-6 text-center">Pasos que Seguimos para Crear este Sitio</h2>
+    <ol class="list-decimal list-inside space-y-4 text-gray-700">
+      <li><strong>Primero:</strong> Planificamos el contenido y estructura.</li>
+      <li><strong>Segundo:</strong> Usamos Tailwind CSS para el diseño.</li>
+      <li><strong>Tercero:</strong> Creamos el menú de navegación.</li>
+      <li><strong>Cuarto:</strong> Agregamos las secciones de hoja de vida, notas, galería y video.</li>
+      <li><strong>Quinto:</strong> Programamos el juego en JavaScript.</li>
+      <li><strong>Por último:</strong> Revisamos y ajustamos todo el sitio.</li>
+    </ol>
+  </section>
+
+  <!-- Script del juego -->
+  <script>
+    const tablero = Array(9).fill(null);
+    let jugador = 'X';
+    let juegoActivo = true;
+
+    const combinacionesGanadoras = [
+      [0,1,2],[3,4,5],[6,7,8],
+      [0,3,6],[1,4,7],[2,5,8],
+      [0,4,8],[2,4,6]
+    ];
+
+    const casillas = document.querySelectorAll('.casilla');
+    const mensaje = document.getElementById('mensaje');
+    const reiniciarBtn = document.getElementById('reiniciar');
+
+    function verificarGanador(jugador) {
+      return combinacionesGanadoras.some(comb =>
+        comb.every(index => tablero[index] === jugador)
+      );
+    }
+
+    function tableroLleno() {
+      return tablero.every(c => c !== null);
+    }
+
+    function computadoraJuega() {
+      if (!juegoActivo) return;
+      let indice;
+      do {
+        indice = Math.floor(Math.random() * 9);
+      } while (tablero[indice] !== null);
+      tablero[indice] = 'O';
+      casillas[indice].textContent = 'O';
+      if (verificarGanador('O')) {
+        mensaje.textContent = '¡La computadora gana!';
+        juegoActivo = false;
+      } else if (tableroLleno()) {
+        mensaje.textContent = '¡Empate!';
+        juegoActivo = false;
+      }
+    }
+
+    function manejarClick(e) {
+      const index = e.target.dataset.index;
+      if (tablero[index] !== null || !juegoActivo) return;
+      tablero[index] = 'X';
+      e.target.textContent = 'X';
+      if (verificarGanador('X')) {
+        mensaje.textContent = '¡Ganaste!';
+        juegoActivo = false;
+      } else if (tableroLleno()) {
+        mensaje.textContent = '¡Empate!';
+        juegoActivo = false;
+      } else {
+        setTimeout(computadoraJuega, 500);
+      }
+    }
+
+    function reiniciarJuego() {
+      tablero.fill(null);
+      casillas.forEach(c => c.textContent = '');
+      mensaje.textContent = '';
+      juegoActivo = true;
+    }
+
+    casillas.forEach(c => c.addEventListener('click', manejarClick));
+    reiniciarBtn.addEventListener('click', reiniciarJuego);
+  </script>
+
+  <script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+</body>
+</html>
